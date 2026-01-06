@@ -71,10 +71,10 @@ export default function Resume() {
                   <h2 className="text-3xl font-bold text-foreground mb-2">Chang Xiu Chen</h2>
               <p className="text-primary font-semibold mb-3">Full-Stack Developer & UI/UX Designer</p>
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                    <span>📧 Email: changxiuchen@email.com</span>
+                    <a href="mailto:xiuchen.w@outlook.com" className="hover:text-primary transition-colors">📧 Email: xiuchen.w@outlook.com</a>
                     <span>📱 Phone: +65 8866 9245</span>
-                    <span>🔗 LinkedIn: www.linkedin.com/in/chang-xiu-chen-3710011ba</span>
-                    <span>💻 GitHub: github.com/changxiuchen</span>
+                    <a href="https://www.linkedin.com/in/chang-xiu-chen-3710011ba" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">🔗 LinkedIn: www.linkedin.com/in/chang-xiu-chen-3710011ba</a>
+                    <a href="https://github.com/changxiuchen" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">💻 GitHub: github.com/changxiuchen</a>
                   </div>
                 </div>
               </div>
