@@ -4,7 +4,7 @@ export default function ExperienceSection() {
   const experiences = [
     {
       type: "work",
-      title: "Part-time Developer & Operations",
+      title: "Project Leader (Intern) & IT Assistant",
       company: "Intertech Hardware",
       period: "2023 - Present",
       description: "Managing e-commerce platforms (Shopify, Lazada), optimizing POS inventory systems (Lightspeed X), and mentoring new team members on system operations and best practices.",
@@ -17,26 +17,51 @@ export default function ExperienceSection() {
     },
     {
       type: "work",
-      title: "Wheelchair Assistance",
-      period: "2022 - 2023",
-      description: "Provided reliable support to passengers, learning the importance of dependability, communication, and understanding real-world problems.",
+      title: "Passenger Service Assistant (Wheelchair Assistance)",
+      company: "Changi Airport (SATS)",
+      period: "2022 - Present",
+      description: "Provided reliable support to international passengers, learning the importance of dependability, communication, and understanding real-world accessibility needs.",
       highlights: [
-        "Delivered consistent, high-quality service to passengers",
-        "Developed strong communication and problem-solving skills",
-        "Learned to approach challenges with calm and systematic thinking",
+        "Assisted international passengers with language barriers using patience and clear guidance",
+        "Applied insights from assisting elderly passengers to design accessible interfaces",
+        "Maintained strict punctuality and readiness, adhering to tight airport schedules",
       ],
     },
     {
       type: "education",
-      title: "Diploma in Software Engineering",
-      company: "Singapore Polytechnic",
-      period: "In Progress",
+      title: "Diploma in Infocomm & Media Engineering",
+      company: "Nanyang Polytechnic",
+      period: "Completing 2027",
       description: "Comprehensive training in full-stack web development, mobile app development, UI/UX design, and database management.",
       highlights: [
         "Full-stack web development (PHP, ASP.NET Core, React)",
-        "Mobile app development (Flutter)",
+        "Mobile app development (Flutter & Dart)",
         "UI/UX design and prototyping",
-        "Database design and management",
+        "Database design and management with SQL Server",
+      ],
+    },
+    {
+      type: "education",
+      title: "Higher Nitec in IT Applications Development",
+      company: "ITE College Central Singapore",
+      period: "2024",
+      description: "Advanced training in web applications and IT systems development.",
+      highlights: [
+        "Web application development",
+        "IT systems and infrastructure",
+        "Project management and leadership",
+      ],
+    },
+    {
+      type: "education",
+      title: "Nitec in Web Applications",
+      company: "ITE College Central Singapore",
+      period: "2023",
+      description: "Foundational training in web application development and design.",
+      highlights: [
+        "Web development fundamentals",
+        "Database basics",
+        "User interface design",
       ],
     },
   ];
@@ -94,7 +119,7 @@ export default function ExperienceSection() {
             <h3 className="heading-subsection mb-8 text-foreground">Technical Skills</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-bold text-foreground mb-4">Backend & Full-Stack</h4>
+                <h4 className="font-bold text-foreground mb-4">Backend & Databases</h4>
                 <div className="flex flex-wrap gap-2">
                   {["PHP", "ASP.NET Core", "C#", "SQL Server", "MySQL", "Node.js"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">

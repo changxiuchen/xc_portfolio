@@ -1,72 +1,131 @@
 import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
+import { ProjectDetail } from "@/contexts/ProjectContext";
 
 export default function ProjectsSection() {
-  const projects = [
+  const projects: ProjectDetail[] = [
     {
+      id: "movie-reservation",
       title: "Movie Reservation System",
       description:
-        "Built a dynamic movie ticketing system using pure PHP and jQuery, designing a custom MVC architecture to manage seat availability and user authentication without relying on frameworks. The system provides an intuitive interface for users to browse movies, select dates and times, choose seats, and manage their reservations.",
+        "Built a dynamic movie ticketing system using pure PHP and jQuery, designing a custom MVC architecture to manage seat availability and user authentication.",
+      fullDescription:
+        "This project showcases my ability to build a fully functional web application from scratch without relying on frameworks. I designed a custom MVC architecture using pure PHP to manage complex business logic including seat availability, user authentication, and reservation management. The system provides an intuitive interface for users to browse movies, select dates and times, choose seats in real-time, and manage their reservations with full CRUD operations.",
       technologies: ["PHP", "HTML5", "CSS3", "JavaScript", "MySQL", "jQuery"],
-      image: "/images/Desktop_Home.jpg",
+      images: {
+        main: "/images/Desktop_Home.jpg",
+        gallery: ["/images/Desktop_MoviesDetails.jpg", "/images/Desktop_MoviesDetailscopy.jpg"],
+      },
       features: [
         "Movie listing with filtering and search",
         "Interactive date and time selection",
-        "Real-time seat availability visualization",
-        "Reservation management (view, edit, delete)",
+        "Real-time seat availability visualization with color-coded status",
+        "Reservation management (view, edit, delete operations)",
         "User authentication and profile management",
-        "Fully responsive design",
+        "Fully responsive design for all devices",
+        "Custom MVC architecture without frameworks",
       ],
+      wireframes: ["/images/L2_02_ChangXiuChen_244584Q_Proj1_A3Poster-compressed.pdf"],
       status: "completed" as const,
       links: {
         github: "https://github.com/changxiuchen",
       },
+      learnings: [
+        "Built a fully responsive and functional website from scratch using pure PHP",
+        "Designed and implemented custom MVC architecture for scalability",
+        "Mastered PHP and phpMyAdmin for data management and retrieval",
+        "Learned to create interactive UIs with jQuery without modern frameworks",
+        "Developed understanding of database design and user authentication",
+      ],
     },
     {
+      id: "facility-management",
       title: "Facility Management System",
       description:
-        "Designed a responsive booking platform using ASP.NET Core MVC to help teams manage facility reservations efficiently. The system features advanced search filtering, relational database design, and a clean, intuitive interface for managing facilities, bookings, and team coordination.",
+        "Designed a responsive booking platform using ASP.NET Core MVC to help teams manage facility reservations efficiently with advanced search filtering.",
+      fullDescription:
+        "This full-stack web project demonstrates my ability to work with enterprise-level technologies. Built using ASP.NET Core MVC and C#, the system features a relational SQL Server database with advanced search and filtering capabilities. The platform allows users to manage facilities, facility types, and bookings with a clean, responsive interface. This project showcases my understanding of MVC architecture, database design, and the ability to create complex search queries.",
       technologies: ["ASP.NET Core", "C#", "SQL Server", "MVC", "Responsive Design"],
-      image: "/images/Desktop_MoviesDetails.jpg",
+      images: {
+        main: "/images/FMS_Facility_Types.png",
+        gallery: ["/images/FMS_Search.png"],
+      },
       features: [
         "Facility CRUD operations (Create, Read, Update, Delete)",
+        "Facility type management with categorization",
         "Advanced search and filtering capabilities",
-        "Facility type management",
-        "Responsive design for all devices",
-        "Relational database architecture",
-        "User-friendly booking interface",
+        "Responsive design optimized for all devices",
+        "Relational database architecture with SQL Server",
+        "User-friendly booking and management interface",
+        "Complex query handling for advanced searches",
       ],
       status: "in-progress" as const,
+      learnings: [
+        "Learned ASP.NET Core MVC framework and C# programming",
+        "Designed relational databases with SQL Server",
+        "Implemented advanced search filtering for complex queries",
+        "Developed responsive web interfaces with modern design principles",
+        "Understood enterprise-level application architecture",
+      ],
     },
     {
+      id: "ui-ux-design",
       title: "UI/UX Design Portfolio",
       description:
-        "Created a series of designs for social media and marketing campaigns using Canva and Photoshop, focusing on visual hierarchy and user engagement. These designs showcase my understanding of design principles, brand consistency, and the ability to communicate ideas visually.",
+        "Created a series of designs for social media and marketing campaigns using Canva and Photoshop, focusing on visual hierarchy and user engagement.",
+      fullDescription:
+        "This collection of design work demonstrates my proficiency in design tools and my understanding of visual communication principles. I've created designs for various purposes including social media promotions, marketing materials, and portfolio presentations. Each design showcases my ability to apply color theory, typography, and layout principles to create visually appealing and effective marketing materials.",
       technologies: ["Photoshop", "Illustrator", "Canva", "Figma"],
-      image: "/images/L2_02_Chang_Xiu_Chen_244584Q_ESSPoster.jpg",
+      images: {
+        main: "/images/L2_02_Chang_Xiu_Chen_244584Q_ESSPoster.jpg",
+        gallery: [],
+      },
       features: [
         "Portfolio webpage design with responsive mockups",
-        "Social media promotional posters",
-        "Brand identity and visual consistency",
-        "User-centered design approach",
-        "Professional color palettes and typography",
-        "Multi-device mockups and presentations",
+        "Social media promotional posters and graphics",
+        "Brand identity and visual consistency across materials",
+        "User-centered design approach for maximum engagement",
+        "Professional color palettes and typography selection",
+        "Multi-device mockups and responsive presentations",
       ],
       status: "completed" as const,
+      learnings: [
+        "Mastered design tools including Photoshop, Illustrator, and Canva",
+        "Developed understanding of visual hierarchy and composition",
+        "Learned to apply color theory and psychology in design",
+        "Understood the importance of responsive design in digital marketing",
+        "Gained experience in creating cohesive brand identities",
+      ],
     },
     {
+      id: "workhub-app",
       title: "WorkHub - Task Management App",
       description:
-        "Designed a comprehensive mobile task management app proposal with detailed use cases, UI/UX flows, and feature roadmap. This project demonstrates systematic problem-solving, user research, and the ability to plan complex applications before development.",
-      technologies: ["Flutter", "Shared Preferences", "UI/UX Design", "Wireframing"],
+        "Designed a comprehensive mobile task management app proposal with detailed use cases, UI/UX flows, and feature roadmap demonstrating systematic problem-solving.",
+      fullDescription:
+        "WorkHub is a cross-platform mobile task management application designed to help remote teams stay organized and meet deadlines. This project demonstrates my ability to plan complex applications systematically before development. I created detailed use case diagrams, comprehensive UI/UX flows, and a complete feature roadmap. The proposal includes 8 mandatory features for core functionality, 4 bonus features for enhanced user experience, and 1 challenging feature involving local data persistence using Shared Preferences.",
+      technologies: ["Flutter", "Dart", "Shared Preferences", "UI/UX Design", "Wireframing"],
+      images: {
+        main: "/images/Desktop_Home.jpg",
+        gallery: [],
+      },
       features: [
-        "8 mandatory features for core functionality",
-        "4 bonus features for enhanced user experience",
-        "1 challenging feature (data persistence with Shared Preferences)",
-        "Detailed use case diagrams",
-        "Complete UI/UX navigation flows",
-        "Professional wireframes and mockups",
+        "Task creation and management with priority levels",
+        "Team collaboration and task assignment",
+        "Real-time notifications for task updates",
+        "Deadline tracking and reminders",
+        "Offline functionality with local data persistence",
+        "User profiles and team management",
+        "Advanced filtering and search capabilities",
       ],
       status: "proposal" as const,
+      learnings: [
+        "Developed systematic approach to app planning and design",
+        "Learned to create detailed use case diagrams and user flows",
+        "Understood the importance of feature prioritization",
+        "Gained experience in mobile app UI/UX design principles",
+        "Learned to plan for offline functionality and data persistence",
+      ],
     },
   ];
 
@@ -80,10 +139,13 @@ export default function ProjectsSection() {
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, idx) => (
-              <ProjectCard key={idx} {...project} />
+            {projects.map((project) => (
+              <ProjectCard key={project.id} {...project} />
             ))}
           </div>
+
+          {/* Project Modal */}
+          <ProjectModal />
 
           {/* Additional Context */}
           <div className="mt-16 p-8 bg-background border border-border rounded-lg">
@@ -93,7 +155,7 @@ export default function ProjectsSection() {
               I start by understanding the user's needs, design thoughtful solutions, and implement 
               them with attention to both functionality and user experience. Whether it's a full-stack 
               web application, a mobile app proposal, or design work, I bring the same dedication to 
-              quality and reliability that defines my professional philosophy.
+              quality and reliability that defines my professional philosophy: Steadfast, Reliable, User-Focused.
             </p>
           </div>
         </div>
