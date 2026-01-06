@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import EducationSection from "@/components/EducationSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ProjectModal from "@/components/ProjectModal";
 import TestimonialSection from "@/components/TestimonialSection";
@@ -29,6 +30,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <EducationSection />
         <ProjectsSection />
         <ProjectModal />
         <TestimonialSection />

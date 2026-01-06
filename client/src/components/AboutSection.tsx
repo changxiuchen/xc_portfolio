@@ -1,6 +1,26 @@
 import { CheckCircle2 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function AboutSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("about");
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const qualities = [
     {
       title: "Steadfast",
@@ -17,7 +37,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-card/50">
+    <section id="about" className={`py-20 md:py-32 bg-card/50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container">
         <div className="max-w-4xl">
           {/* Section Title */}
@@ -46,8 +66,8 @@ export default function AboutSection() {
 
           {/* Three Qualities */}
           <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {qualities.map((quality) => (
-              <div key={quality.title} className="bg-background p-6 rounded-lg border border-border">
+            {qualities.map((quality, idx) => (
+              <div key={quality.title} className={`bg-background p-6 rounded-lg border border-border hover:border-primary/50 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${idx * 150}ms`}}>
                 <div className="flex items-start gap-3 mb-4">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <h3 className="text-xl font-bold text-foreground">{quality.title}</h3>
@@ -58,7 +78,7 @@ export default function AboutSection() {
           </div>
 
           {/* Personal Touch */}
-          <div className="mt-16 p-8 bg-primary/10 border border-primary/20 rounded-lg">
+          <div className={`mt-16 p-8 bg-primary/10 border border-primary/20 rounded-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '450ms'}}>
             <p className="text-foreground">
               When I'm not coding or designing, I stay active through gym workouts (3x weekly), 
               basketball, volleyball, and bouldering with friends. I believe a balanced life 

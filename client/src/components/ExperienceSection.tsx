@@ -1,9 +1,28 @@
-import { Briefcase, BookOpen } from "lucide-react";
+import { Briefcase } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function ExperienceSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("experience");
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const experiences = [
     {
-      type: "work",
       title: "Project Leader (Intern) & IT Assistant",
       company: "Intertech Hardware",
       period: "2023 - Present",
@@ -16,7 +35,6 @@ export default function ExperienceSection() {
       ],
     },
     {
-      type: "work",
       title: "Passenger Service Assistant (Wheelchair Assistance)",
       company: "Changi Airport (SATS)",
       period: "2022 - Present",
@@ -27,68 +45,38 @@ export default function ExperienceSection() {
         "Maintained strict punctuality and readiness, adhering to tight airport schedules",
       ],
     },
-    {
-      type: "education",
-      title: "Diploma in Infocomm & Media Engineering",
-      company: "Nanyang Polytechnic",
-      period: "Completing 2027",
-      description: "Comprehensive training in full-stack web development, mobile app development, UI/UX design, and database management.",
-      highlights: [
-        "Full-stack web development (PHP, ASP.NET Core, React)",
-        "Mobile app development (Flutter & Dart)",
-        "UI/UX design and prototyping",
-        "Database design and management with SQL Server",
-      ],
-    },
-    {
-      type: "education",
-      title: "Higher Nitec in IT Applications Development",
-      company: "ITE College Central Singapore",
-      period: "2024",
-      description: "Advanced training in web applications and IT systems development.",
-      highlights: [
-        "Web application development",
-        "IT systems and infrastructure",
-        "Project management and leadership",
-      ],
-    },
-    {
-      type: "education",
-      title: "Nitec in Web Applications",
-      company: "ITE College Central Singapore",
-      period: "2023",
-      description: "Foundational training in web application development and design.",
-      highlights: [
-        "Web development fundamentals",
-        "Database basics",
-        "User interface design",
-      ],
-    },
   ];
 
   return (
-    <section id="experience" className="py-20 md:py-32 bg-background">
+    <section 
+      id="experience" 
+      className={`py-20 md:py-32 bg-background transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container">
         <div className="max-w-4xl">
           {/* Section Title */}
-          <h2 className="heading-section mb-4 text-foreground">Experience & Education</h2>
+          <h2 className="heading-section mb-4 text-foreground">Work Experience</h2>
           <div className="w-16 h-1 bg-primary mb-12"></div>
 
           {/* Timeline */}
           <div className="space-y-8">
             {experiences.map((exp, idx) => (
-              <div key={idx} className="relative pl-8 border-l-2 border-primary">
+              <div 
+                key={idx} 
+                className={`relative pl-8 border-l-2 border-primary transition-all duration-700 ${
+                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+                }`}
+                style={{ transitionDelay: `${idx * 150}ms` }}
+              >
                 {/* Timeline dot */}
                 <div className="absolute -left-4 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
 
                 {/* Content */}
-                <div className="bg-card p-6 rounded-lg border border-border">
+                <div className="bg-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors duration-300">
                   <div className="flex items-start gap-3 mb-2">
-                    {exp.type === "work" ? (
-                      <Briefcase className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    ) : (
-                      <BookOpen className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    )}
+                    <Briefcase className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
                       {exp.company && (
@@ -115,14 +103,18 @@ export default function ExperienceSection() {
           </div>
 
           {/* Skills Section */}
-          <div className="mt-16 pt-16 border-t border-border">
+          <div className={`mt-16 pt-16 border-t border-border transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+            style={{ transitionDelay: "300ms" }}
+          >
             <h3 className="heading-subsection mb-8 text-foreground">Technical Skills</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-foreground mb-4">Backend & Databases</h4>
                 <div className="flex flex-wrap gap-2">
                   {["PHP", "ASP.NET Core", "C#", "SQL Server", "MySQL", "Node.js"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
@@ -132,7 +124,7 @@ export default function ExperienceSection() {
                 <h4 className="font-bold text-foreground mb-4">Frontend & Design</h4>
                 <div className="flex flex-wrap gap-2">
                   {["React", "TypeScript", "Tailwind CSS", "Figma", "Photoshop", "Illustrator"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
@@ -142,7 +134,7 @@ export default function ExperienceSection() {
                 <h4 className="font-bold text-foreground mb-4">Mobile & Tools</h4>
                 <div className="flex flex-wrap gap-2">
                   {["Flutter", "Git", "MVC Architecture", "Responsive Design", "Canva"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
@@ -152,7 +144,7 @@ export default function ExperienceSection() {
                 <h4 className="font-bold text-foreground mb-4">Soft Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {["Problem Solving", "Team Leadership", "Communication", "Mentoring", "System Optimization"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}

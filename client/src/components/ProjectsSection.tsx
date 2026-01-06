@@ -1,8 +1,28 @@
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import { ProjectDetail } from "@/contexts/ProjectContext";
+import { useEffect, useState } from "react";
 
 export default function ProjectsSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("projects");
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const projects: ProjectDetail[] = [
     {
       id: "movie-reservation",
@@ -130,7 +150,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-card/50">
+    <section id="projects" className={`py-20 md:py-32 bg-card/50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container">
         <div className="max-w-6xl">
           {/* Section Title */}
@@ -139,8 +159,10 @@ export default function ProjectsSection() {
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
+            {projects.map((project, idx) => (
+              <div key={project.id} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${idx * 150}ms`}}>
+                <ProjectCard {...project} />
+              </div>
             ))}
           </div>
 
@@ -148,7 +170,7 @@ export default function ProjectsSection() {
           <ProjectModal />
 
           {/* Additional Context */}
-          <div className="mt-16 p-8 bg-background border border-border rounded-lg">
+          <div className={`mt-16 p-8 bg-background border border-border rounded-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '600ms'}}>
             <h3 className="text-xl font-bold text-foreground mb-4">My Approach to Projects</h3>
             <p className="text-foreground leading-relaxed">
               Each project represents my commitment to solving real-world problems systematically. 
