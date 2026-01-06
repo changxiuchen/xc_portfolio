@@ -67,8 +67,8 @@ export default function ProjectsSection() {
         "This full-stack web project demonstrates my ability to work with enterprise-level technologies. Built using ASP.NET Core MVC and C#, the system features a relational SQL Server database with advanced search and filtering capabilities. The platform allows users to manage facilities, facility types, and bookings with a clean, responsive interface. This project showcases my understanding of MVC architecture, database design, and the ability to create complex search queries.",
       technologies: ["ASP.NET Core", "C#", "SQL Server", "MVC", "Responsive Design"],
       images: {
-        main: "/images/pasted_file_OPlKvP_image.png",
-        gallery: ["/images/pasted_file_esieFc_image.png"],
+        main: "/images/fms-facility-types.png",
+        gallery: ["/images/fms-search.png"],
       },
       features: [
         "Facility CRUD operations (Create, Read, Update, Delete)",

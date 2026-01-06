@@ -101,7 +101,7 @@ export default function Resume() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Frontend & Design</h4>
-                  <p className="text-muted-foreground">React, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript, jQuery, Figma, Photoshop, Illustrator</p>
+                  <p className="text-muted-foreground">CSS, HTML5, CSS3, JavaScript, jQuery, Figma, Photoshop, Illustrator</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Mobile & Tools</h4>
