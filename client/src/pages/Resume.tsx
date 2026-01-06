@@ -61,13 +61,22 @@ export default function Resume() {
           <div className="bg-card border border-border rounded-lg p-8 md:p-12 space-y-8">
             {/* Header */}
             <div className="border-b border-border pb-6">
-              <h2 className="text-3xl font-bold text-foreground mb-2">Chang Xiu Chen</h2>
+              <div className="flex items-start gap-6 mb-6">
+                <img
+                  src="/images/profile.jpg"
+                  alt="Chang Xiu Chen"
+                  className="w-32 h-40 rounded-lg object-cover border-2 border-primary"
+                />
+                <div className="flex-1">
+                  <h2 className="text-3xl font-bold text-foreground mb-2">Chang Xiu Chen</h2>
               <p className="text-primary font-semibold mb-3">Full-Stack Developer & UI/UX Designer</p>
-              <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                <span>📧 Email: changxiuchen@email.com</span>
-                <span>📱 Phone: +65 8866 9245</span>
-                <span>🔗 LinkedIn: www.linkedin.com/in/chang-xiu-chen-3710011ba</span>
-                <span>💻 GitHub: github.com/changxiuchen</span>
+                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                    <span>📧 Email: changxiuchen@email.com</span>
+                    <span>📱 Phone: +65 8866 9245</span>
+                    <span>🔗 LinkedIn: www.linkedin.com/in/chang-xiu-chen-3710011ba</span>
+                    <span>💻 GitHub: github.com/changxiuchen</span>
+                  </div>
+                </div>
               </div>
             </div>
 

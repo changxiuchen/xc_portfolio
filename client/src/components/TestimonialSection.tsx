@@ -1,8 +1,27 @@
-
+import { useEffect, useState } from "react";
 
 export default function TestimonialSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("testimonials");
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-20 md:py-32 bg-primary/5 border-y border-primary/20">
+    <section id="testimonials" className={`py-20 md:py-32 bg-primary/5 border-y border-primary/20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container">
         <div className="max-w-4xl mx-auto">
           {/* Section Title */}
@@ -10,14 +29,30 @@ export default function TestimonialSection() {
           <div className="w-16 h-1 bg-primary mx-auto mb-12"></div>
 
           {/* Testimonial Card */}
-          <div className="bg-card border border-border rounded-lg p-8 md:p-12 shadow-lg">
+          <div className={`bg-card border border-border rounded-lg p-8 md:p-12 shadow-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '200ms'}}>
             {/* Quote */}
             <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic border-l-4 border-primary pl-6">
               "Having Xiu Chen on our Intertech Team has been an absolute pleasure and he will certainly be a true asset in his pursuit. His dedication, attitude and potential capability will only get better given more leadership opportunities. I wholeheartedly recommend Xiu Chen as a valuable asset to any institution or organisation to any opportunities he seeks."
             </blockquote>
 
+            {/* Full Testimonial Body */}
+            <div className="prose prose-invert max-w-none mb-8 text-muted-foreground leading-relaxed space-y-4">
+              <p>
+                Xiu Chen came to our shop to learn to be part of our front and back end team and by the time he finished his internship with us, he was a strong team player and had learnt nearly all the ropes of what our experienced staff are capable of. Besides, he was part of a team that helped build a robust plan for our Ecommerce and social media road map.
+              </p>
+              <p>
+                Xiu Chen's motivation to learn and contribute is commendable to his entire internship duration. He seized opportunities to learn to expand his knowledge and skill set. He contributed where his strengths in IT and Social Media outreach were, resulting in a stronger marketing outreach for Intertech. His contribution had definitely led to the success of our continued team projects. On top of that, he became extremely competent at handling all the front end work despite his short tenure.
+              </p>
+              <p>
+                Xiu Chen was also extremely teachable and responsible. His commitment to excellence also meant that he delivered work that displayed attention to details which he committed to with a strong work ethic. He did not miss a session of work and would often stay back to complete work or to provide assistance when the need arose. What he did not know, he invested time and energy to learn them well which he then displayed at his work.
+              </p>
+              <p>
+                Lastly, I also had the pleasure to witness Xiu Chen's growth as a leader. Through his proactive approach and initiative, he has overcome his personal barrier of being on the backend to lead and provide guidance to other interns, becoming a project leader and inspiring others. He had exhibited poise, confidence and a keen sense of responsibility that won him positive comments from co-workers and interns alike. His ability to be a strong team player also meant that he was always included in projects and that added on to building his leadership capabilities.
+              </p>
+            </div>
+
             {/* Author */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 pt-6 border-t border-border">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
                 JG
               </div>
@@ -27,30 +62,10 @@ export default function TestimonialSection() {
                 <p className="text-sm text-muted-foreground">February 2024</p>
               </div>
             </div>
-
-            {/* Key Highlights */}
-            <div className="mt-8 pt-8 border-t border-border">
-              <h3 className="font-bold text-foreground mb-4">Recognized for:</h3>
-              <ul className="grid md:grid-cols-2 gap-3">
-                {[
-                  "Strong team player with excellent collaboration skills",
-                  "Commendable motivation to learn and contribute",
-                  "Extremely teachable and responsible",
-                  "Demonstrated leadership and project management",
-                  "Commitment to excellence and attention to detail",
-                  "Ability to overcome personal barriers and lead others",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="text-primary font-bold mt-1">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           {/* Context */}
-          <div className="mt-12 text-center text-muted-foreground max-w-2xl mx-auto">
+          <div className={`mt-12 text-center text-muted-foreground max-w-2xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '400ms'}}>
             <p>
               This testimonial is from my internship at Intertech Hardware (September 2023 - February 2024), 
               where I worked as a project leader and IT assistant, managing e-commerce platforms and mentoring team members.
