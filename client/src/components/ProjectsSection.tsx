@@ -67,8 +67,8 @@ export default function ProjectsSection() {
         "This full-stack web project demonstrates my ability to work with enterprise-level technologies. Built using ASP.NET Core MVC and C#, the system features a relational SQL Server database with advanced search and filtering capabilities. The platform allows users to manage facilities, facility types, and bookings with a clean, responsive interface. This project showcases my understanding of MVC architecture, database design, and the ability to create complex search queries.",
       technologies: ["ASP.NET Core", "C#", "SQL Server", "MVC", "Responsive Design"],
       images: {
-        main: "/images/FMS_Facility_Types.png",
-        gallery: ["/images/FMS_Search.png"],
+        main: "/images/pasted_file_OPlKvP_image.png",
+        gallery: ["/images/pasted_file_esieFc_image.png"],
       },
       features: [
         "Facility CRUD operations (Create, Read, Update, Delete)",
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
       technologies: ["Photoshop", "Illustrator", "Canva", "Figma"],
       images: {
         main: "/images/L2_02_Chang_Xiu_Chen_244584Q_ESSPoster.jpg",
-        gallery: ["/images/portfolio_poster.pdf", "/images/qixi.pdf"],
+        gallery: ["/images/L2_02_ChangXiuChen_244584Q_Proj1_A3Poster-compressed.pdf", "/images/qixi.pdf"],
       },
       features: [
         "Portfolio webpage design with responsive mockups",
@@ -126,7 +126,7 @@ export default function ProjectsSection() {
         "WorkHub is a cross-platform mobile task management application designed to help remote teams stay organized and meet deadlines. This project demonstrates my ability to plan complex applications systematically before development. I created detailed use case diagrams, comprehensive UI/UX flows, and a complete feature roadmap. The proposal includes 8 mandatory features for core functionality, 4 bonus features for enhanced user experience, and 1 challenging feature involving local data persistence using Shared Preferences.",
       technologies: ["Flutter", "Dart", "Shared Preferences", "UI/UX Design", "Wireframing"],
       images: {
-        main: "",
+        main: null,
         gallery: [],
       },
       features: [

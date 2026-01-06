@@ -9,7 +9,7 @@ export default function ProjectModal() {
 
   if (!selectedProject) return null;
 
-  const allImages = [selectedProject.images.main, ...selectedProject.images.gallery];
+  const allImages = [selectedProject.images.main, ...selectedProject.images.gallery].filter((img) => img !== null && img !== undefined) as string[];
   const currentImage = allImages[activeImageIndex];
 
   return (
@@ -29,32 +29,39 @@ export default function ProjectModal() {
 
         <div className="space-y-6 mt-4">
           {/* Main Image Gallery */}
-          <div className="space-y-4">
-            <div className="relative bg-background rounded-lg overflow-hidden">
-              <img
-                src={currentImage}
-                alt={`${selectedProject.title} - Image ${activeImageIndex + 1}`}
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Image Navigation */}
-            {allImages.length > 1 && (
-              <div className="flex gap-2 overflow-x-auto pb-2">
-                {allImages.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveImageIndex(idx)}
-                    className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-smooth ${
-                      activeImageIndex === idx ? "border-primary" : "border-border"
-                    }`}
-                  >
-                    <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
-                  </button>
-                ))}
+          {allImages.length > 0 && currentImage && (
+            <div className="space-y-4">
+              <div className="relative bg-background rounded-lg overflow-hidden">
+                <img
+                  src={currentImage}
+                  alt={`${selectedProject.title} - Image ${activeImageIndex + 1}`}
+                  className="w-full h-auto"
+                />
               </div>
-            )}
-          </div>
+
+              {/* Image Navigation */}
+              {allImages.length > 1 && (
+                <div className="flex gap-2 overflow-x-auto pb-2">
+                  {allImages.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveImageIndex(idx)}
+                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-smooth ${
+                        activeImageIndex === idx ? "border-primary" : "border-border"
+                      }`}
+                    >
+                      <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+          {allImages.length === 0 && (
+            <div className="bg-background rounded-lg p-8 text-center text-muted-foreground">
+              <p>No images available for this project</p>
+            </div>
+          )}
 
           {/* Project Details */}
           <div className="space-y-4">

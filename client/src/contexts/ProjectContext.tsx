@@ -7,7 +7,7 @@ export interface ProjectDetail {
   fullDescription: string;
   technologies: string[];
   images: {
-    main: string;
+    main: string | null;
     gallery: string[];
   };
   features: string[];
