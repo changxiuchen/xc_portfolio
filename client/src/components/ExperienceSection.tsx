@@ -123,7 +123,7 @@ export default function ExperienceSection() {
               <div>
                 <h4 className="font-bold text-foreground mb-4">Frontend & Design</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "TypeScript", "Tailwind CSS", "Figma", "Photoshop", "Illustrator"].map((skill) => (
+                  {["Figma", "Photoshop", "Illustrator"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
                       {skill}
                     </span>
