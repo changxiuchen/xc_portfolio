@@ -39,7 +39,7 @@ export default function AboutSection() {
   return (
     <section id="about" className={`py-20 md:py-32 bg-card/50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
           {/* Section Title */}
           <h2 className="heading-section mb-4 text-foreground">Who I Am</h2>
           <div className="w-16 h-1 bg-primary mb-12"></div>

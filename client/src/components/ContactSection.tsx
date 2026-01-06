@@ -32,7 +32,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 md:py-32 bg-background">
       <div className="container">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto px-4 md:px-8">
           {/* Section Title */}
           <h2 className="heading-section mb-4 text-foreground">Let's Connect</h2>
           <div className="w-16 h-1 bg-primary mb-12"></div>

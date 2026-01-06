@@ -23,7 +23,7 @@ export default function TestimonialSection() {
   return (
     <section id="testimonials" className={`py-20 md:py-32 bg-primary/5 border-y border-primary/20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
           {/* Section Title */}
           <h2 className="heading-section mb-4 text-foreground text-center">What Others Say</h2>
           <div className="w-16 h-1 bg-primary mx-auto mb-12"></div>
