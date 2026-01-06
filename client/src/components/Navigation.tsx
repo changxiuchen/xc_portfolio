@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +56,7 @@ export default function Navigation() {
               {link.label}
             </button>
           ))}
+          <ThemeToggle />
           <Button
             onClick={() => handleNavClick("#contact")}
             className="bg-primary text-primary-foreground hover:bg-primary/90"

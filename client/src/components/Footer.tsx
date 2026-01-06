@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,14 +7,25 @@ export default function Footer() {
     { label: "Home", href: "#" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
+    { label: "Resume", href: "/resume" },
     { label: "Contact", href: "#contact" },
   ];
 
   const socialLinks = [
     {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/chang-xiu-chen-3710011ba",
+      icon: Linkedin,
+    },
+    {
       label: "GitHub",
       href: "https://github.com/changxiuchen",
       icon: Github,
+    },
+    {
+      label: "Email",
+      href: "mailto:changxiuchen@email.com",
+      icon: Mail,
     },
   ];
 
@@ -62,6 +73,7 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       className="p-2 bg-background rounded-lg hover:bg-primary/10 text-muted-foreground hover:text-primary transition-smooth"
                       aria-label={link.label}
+                      title={link.label}
                     >
                       <Icon className="w-5 h-5" />
                     </a>

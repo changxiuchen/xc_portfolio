@@ -78,7 +78,7 @@ export default function ProjectsSection() {
       technologies: ["Photoshop", "Illustrator", "Canva", "Figma"],
       images: {
         main: "/images/L2_02_Chang_Xiu_Chen_244584Q_ESSPoster.jpg",
-        gallery: [],
+        gallery: ["/images/portfolio_poster.pdf", "/images/qixi.pdf"],
       },
       features: [
         "Portfolio webpage design with responsive mockups",
@@ -106,7 +106,7 @@ export default function ProjectsSection() {
         "WorkHub is a cross-platform mobile task management application designed to help remote teams stay organized and meet deadlines. This project demonstrates my ability to plan complex applications systematically before development. I created detailed use case diagrams, comprehensive UI/UX flows, and a complete feature roadmap. The proposal includes 8 mandatory features for core functionality, 4 bonus features for enhanced user experience, and 1 challenging feature involving local data persistence using Shared Preferences.",
       technologies: ["Flutter", "Dart", "Shared Preferences", "UI/UX Design", "Wireframing"],
       images: {
-        main: "/images/Desktop_Home.jpg",
+        main: "",
         gallery: [],
       },
       features: [

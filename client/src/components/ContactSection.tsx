@@ -6,14 +6,20 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "xiuchen.w@outlook.com",
-      href: "mailto:xiuchen.w@outlook.com",
+      value: "changxiuchen@email.com",
+      href: "mailto:changxiuchen@email.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+65 88669245",
+      value: "+65 8866 9245",
       href: "tel:+6588669245",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "chang-xiu-chen-3710011ba",
+      href: "https://www.linkedin.com/in/chang-xiu-chen-3710011ba",
     },
     {
       icon: Github,
@@ -58,7 +64,7 @@ export default function ContactSection() {
                       </div>
                       <div>
                         <h3 className="font-bold text-foreground">{method.label}</h3>
-                        <p className="text-muted-foreground mt-1 group-hover:text-primary transition-smooth">
+                        <p className="text-muted-foreground mt-1 group-hover:text-primary transition-smooth text-sm">
                           {method.value}
                         </p>
                       </div>
@@ -75,7 +81,7 @@ export default function ContactSection() {
             <p className="text-foreground mb-6">
               Send me an email or give me a call. I'm excited to hear about your project!
             </p>
-            <a href="mailto:xiuchen.w@outlook.com">
+            <a href="mailto:changxiuchen@email.com">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8">
                 Send me an Email
               </Button>
