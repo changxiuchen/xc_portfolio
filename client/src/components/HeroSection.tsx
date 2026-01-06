@@ -46,21 +46,7 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          {/* Quick Stats */}
-          <div className="mt-16 pt-16 border-t border-border grid grid-cols-3 gap-8">
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-primary">4+</p>
-              <p className="text-sm text-muted-foreground mt-2">Projects Completed</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-primary">3+</p>
-              <p className="text-sm text-muted-foreground mt-2">Years Experience</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-primary">100%</p>
-              <p className="text-sm text-muted-foreground mt-2">Committed</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

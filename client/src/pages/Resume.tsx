@@ -143,7 +143,7 @@ export default function Resume() {
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Higher Nitec in IT Applications Development</h4>
                   <p className="text-primary font-medium">ITE College Central Singapore | 2024</p>
-                  <p className="text-muted-foreground text-sm">Web application development, IT systems and infrastructure, project management</p>
+                  <p className="text-muted-foreground text-sm">24-month program covering web & mobile app development, UI/UX design, software testing, and digital economy skills. Practical training in industry-standard tools and frameworks.</p>
                 </div>
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Nitec in Web Applications</h4>

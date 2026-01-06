@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+
 
 export default function TestimonialSection() {
   return (
@@ -11,13 +11,6 @@ export default function TestimonialSection() {
 
           {/* Testimonial Card */}
           <div className="bg-card border border-border rounded-lg p-8 md:p-12 shadow-lg">
-            {/* Stars */}
-            <div className="flex gap-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-              ))}
-            </div>
-
             {/* Quote */}
             <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic border-l-4 border-primary pl-6">
               "Having Xiu Chen on our Intertech Team has been an absolute pleasure and he will certainly be a true asset in his pursuit. His dedication, attitude and potential capability will only get better given more leadership opportunities. I wholeheartedly recommend Xiu Chen as a valuable asset to any institution or organisation to any opportunities he seeks."
