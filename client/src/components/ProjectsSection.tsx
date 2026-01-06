@@ -98,7 +98,7 @@ export default function ProjectsSection() {
       technologies: ["Photoshop", "Illustrator", "Canva", "Figma"],
       images: {
         main: "/images/L2_02_Chang_Xiu_Chen_244584Q_ESSPoster.jpg",
-        gallery: ["/images/L2_02_ChangXiuChen_244584Q_Proj1_A3Poster-compressed.pdf", "/images/qixi.pdf"],
+        gallery: ["/images/uiux-poster1.jpg"],
       },
       features: [
         "Portfolio webpage design with responsive mockups",
