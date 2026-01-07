@@ -33,8 +33,8 @@ export default function ProjectsSection() {
         "This project showcases my ability to build a fully functional web application from scratch without relying on frameworks. I designed a custom MVC architecture using pure PHP to manage complex business logic including seat availability, user authentication, and reservation management. The system provides an intuitive interface for users to browse movies, select dates and times, choose seats in real-time, and manage their reservations with full CRUD operations.",
       technologies: ["PHP", "HTML5", "CSS3", "JavaScript", "MySQL", "jQuery"],
       images: {
-        main: "/images/Desktop_Home.jpg",
-        gallery: ["/images/Desktop_MoviesDetails.jpg", "/images/Desktop_MoviesDetailscopy.jpg"],
+        main: "/images/movie_website_homepage.webp",
+        gallery: ["/images/movie_website_movies_grid.webp", "/images/movie_website_movies_page.webp"],
       },
       features: [
         "Movie listing with filtering and search",
@@ -45,10 +45,11 @@ export default function ProjectsSection() {
         "Fully responsive design for all devices",
         "Custom MVC architecture without frameworks",
       ],
-      wireframes: ["/images/L2_02_ChangXiuChen_244584Q_Proj1_A3Poster-compressed.pdf"],
+      wireframes: ["/images/Desktop_Home.jpg", "/images/Desktop_MoviesDetails.jpg", "/images/Desktop_MoviesDetailscopy.jpg", "/images/Desktop_Admin.jpg"],
       status: "completed" as const,
       links: {
         github: "https://github.com/changxiuchen",
+        live: "https://movie-website.page.gd/",
       },
       learnings: [
         "Built a fully responsive and functional website from scratch using pure PHP",
@@ -117,41 +118,7 @@ export default function ProjectsSection() {
         "Gained experience in creating cohesive brand identities",
       ],
     },
-    {
-      id: "movie-website",
-      title: "Golden Scene - Movie Ticketing Website",
-      description:
-        "Built a fully functional movie ticketing website with dynamic content management, real-time seat selection, and integrated booking system using HTML, CSS, and JavaScript.",
-      fullDescription:
-        "Golden Scene is a modern movie ticketing website that allows users to browse movies, check showtimes, and book tickets online. The platform features a carousel for featured movies, advanced search and filtering capabilities, and a quick-buy section for fast ticket purchases. Built with pure HTML, CSS, and JavaScript, the website demonstrates my ability to create responsive, user-friendly interfaces without relying on frameworks. The site includes multiple pages for browsing movies, viewing details, and managing bookings.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Web Design"],
-      images: {
-        main: "/images/movie_website_homepage.webp",
-        gallery: ["/images/movie_website_movies_grid.webp", "/images/movie_website_movies_page.webp"],
-      },
-      features: [
-        "Dynamic movie carousel with featured films",
-        "Movie browsing with filtering by status (Now Showing, Coming Soon, Advance Sale)",
-        "Advanced search functionality for finding specific movies",
-        "Quick-buy section for fast ticket purchases",
-        "Real-time seat selection and availability",
-        "Responsive design optimized for all devices",
-        "User authentication and booking management",
-        "Movie details page with showtimes and pricing",
-      ],
-      wireframes: [],
-      status: "completed" as const,
-      links: {
-        live: "https://movie-website.page.gd/",
-      },
-      learnings: [
-        "Mastered responsive web design principles",
-        "Learned to create interactive user interfaces with vanilla JavaScript",
-        "Developed understanding of user experience in e-commerce platforms",
-        "Gained experience in building dynamic content management systems",
-        "Understood the importance of performance optimization for web applications",
-      ],
-    },
+
     {
       id: "workhub-app",
       title: "WorkHub - Task Management App",
