@@ -131,6 +131,35 @@ export default function ProjectModal() {
               </ul>
             </div>
 
+            {/* Links Section */}
+            {selectedProject.links && (Object.keys(selectedProject.links).length > 0) && (
+              <div>
+                <h4 className="font-bold text-foreground mb-3">Project Links</h4>
+                <div className="flex flex-wrap gap-3">
+                  {selectedProject.links.live && (
+                    <a
+                      href={selectedProject.links.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-smooth"
+                    >
+                      🌐 Visit Live Website
+                    </a>
+                  )}
+                  {selectedProject.links.github && (
+                    <a
+                      href={selectedProject.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-card border border-border text-foreground rounded-lg font-medium hover:bg-background transition-smooth"
+                    >
+                      💻 View on GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Wireframes Section */}
             {selectedProject.wireframes && selectedProject.wireframes.length > 0 && (
               <div>

@@ -118,6 +118,41 @@ export default function ProjectsSection() {
       ],
     },
     {
+      id: "movie-website",
+      title: "Golden Scene - Movie Ticketing Website",
+      description:
+        "Built a fully functional movie ticketing website with dynamic content management, real-time seat selection, and integrated booking system using HTML, CSS, and JavaScript.",
+      fullDescription:
+        "Golden Scene is a modern movie ticketing website that allows users to browse movies, check showtimes, and book tickets online. The platform features a carousel for featured movies, advanced search and filtering capabilities, and a quick-buy section for fast ticket purchases. Built with pure HTML, CSS, and JavaScript, the website demonstrates my ability to create responsive, user-friendly interfaces without relying on frameworks. The site includes multiple pages for browsing movies, viewing details, and managing bookings.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Web Design"],
+      images: {
+        main: "/images/movie_website_homepage.webp",
+        gallery: ["/images/movie_website_movies_grid.webp", "/images/movie_website_movies_page.webp"],
+      },
+      features: [
+        "Dynamic movie carousel with featured films",
+        "Movie browsing with filtering by status (Now Showing, Coming Soon, Advance Sale)",
+        "Advanced search functionality for finding specific movies",
+        "Quick-buy section for fast ticket purchases",
+        "Real-time seat selection and availability",
+        "Responsive design optimized for all devices",
+        "User authentication and booking management",
+        "Movie details page with showtimes and pricing",
+      ],
+      wireframes: [],
+      status: "completed" as const,
+      links: {
+        live: "https://movie-website.page.gd/",
+      },
+      learnings: [
+        "Mastered responsive web design principles",
+        "Learned to create interactive user interfaces with vanilla JavaScript",
+        "Developed understanding of user experience in e-commerce platforms",
+        "Gained experience in building dynamic content management systems",
+        "Understood the importance of performance optimization for web applications",
+      ],
+    },
+    {
       id: "workhub-app",
       title: "WorkHub - Task Management App",
       description:
@@ -146,7 +181,7 @@ export default function ProjectsSection() {
         "Gained experience in mobile app UI/UX design principles",
         "Learned to plan for offline functionality and data persistence",
       ],
-    },
+    }
   ];
 
   return (
