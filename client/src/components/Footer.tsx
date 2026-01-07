@@ -24,7 +24,7 @@ export default function Footer() {
     },
     {
       label: "Email",
-      href: "mailto:changxiuchen@email.com",
+      href: "mailto:xiuchen.w@outlook.com",
       icon: Mail,
     },
   ];

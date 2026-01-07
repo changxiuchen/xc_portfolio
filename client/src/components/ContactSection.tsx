@@ -6,8 +6,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "changxiuchen@email.com",
-      href: "mailto:changxiuchen@email.com",
+      value: "xiuchen.w@outlook.com",
+      href: "mailto:xiuchen.w@outlook.com",
     },
     {
       icon: Phone,
@@ -81,7 +81,7 @@ export default function ContactSection() {
             <p className="text-foreground mb-6">
               Send me an email or give me a call. I'm excited to hear about your project!
             </p>
-            <a href="mailto:changxiuchen@email.com">
+            <a href="mailto:xiuchen.w@outlook.com">
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8">
                 Send me an Email
               </Button>
