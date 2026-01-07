@@ -34,7 +34,7 @@ export default function ProjectsSection() {
       technologies: ["PHP", "HTML5", "CSS3", "JavaScript", "MySQL", "jQuery"],
       images: {
         main: "/images/movie_home.png",
-        gallery: ["/images/movie_home.png", "/images/movie_movies.png", "/images/movie_admin.png", "/images/movie_manage.png"],
+        gallery: ["/images/movie_movies.png", "/images/movie_admin.png", "/images/movie_manage.png"],
       },
       features: [
         "Movie listing with filtering and search",
