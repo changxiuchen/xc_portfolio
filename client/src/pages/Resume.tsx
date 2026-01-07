@@ -169,6 +169,28 @@ export default function Resume() {
               </div>
             </section>
 
+            {/* Awards & Achievements */}
+            <section>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Awards & Achievements</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-primary pl-4">
+                  <h4 className="text-lg font-semibold text-foreground">Director's List (Academic)</h4>
+                  <p className="text-primary font-medium">NYP & ITE | Multiple Semesters (2022-2025)</p>
+                  <p className="text-muted-foreground text-sm">Awarded to the Top 10-15% of the cohort for consistent academic excellence.</p>
+                </div>
+                <div className="border-l-4 border-primary pl-4">
+                  <h4 className="text-lg font-semibold text-foreground">Edusave Merit Bursary</h4>
+                  <p className="text-primary font-medium">Singapore Government | 2023 S2</p>
+                  <p className="text-muted-foreground text-sm">Awarded to the Top 25% of the cohort for academic performance and good conduct.</p>
+                </div>
+                <div className="border-l-4 border-primary pl-4">
+                  <h4 className="text-lg font-semibold text-foreground">EAGLES Award (Leadership)</h4>
+                  <p className="text-primary font-medium">NYP | 2023 S2</p>
+                  <p className="text-muted-foreground text-sm">Selected from the Top 10% for outstanding leadership and service to the community.</p>
+                </div>
+              </div>
+            </section>
+
             {/* Professional Qualities */}
             <section className="bg-primary/5 border border-primary/20 rounded-lg p-6">
               <h3 className="text-xl font-bold text-foreground mb-3">Core Professional Qualities</h3>
