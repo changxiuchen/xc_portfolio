@@ -33,8 +33,8 @@ export default function ProjectsSection() {
         "This project showcases my ability to build a fully functional web application from scratch without relying on frameworks. I designed a custom MVC architecture using pure PHP to manage complex business logic including seat availability, user authentication, and reservation management. The system provides an intuitive interface for users to browse movies, select dates and times, choose seats in real-time, and manage their reservations with full CRUD operations.",
       technologies: ["PHP", "HTML5", "CSS3", "JavaScript", "MySQL", "jQuery"],
       images: {
-        main: "/images/movie_website_homepage.webp",
-        gallery: ["/images/movie_website_movies_grid.webp", "/images/movie_website_movies_page.webp"],
+        main: "/images/movie_home.png",
+        gallery: ["/images/movie_home.png", "/images/movie_movies.png", "/images/movie_admin.png", "/images/movie_manage.png"],
       },
       features: [
         "Movie listing with filtering and search",
