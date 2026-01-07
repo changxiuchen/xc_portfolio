@@ -19,7 +19,7 @@ export default function AchievementsSection() {
     {
       title: "EAGLES Award (Leadership)",
       issuer: "ITE",
-      period: "2023 S2",
+      period: "2023-2025",
       description: "Selected from the Top 10% for outstanding leadership and service to the community.",
       icon: Trophy,
     },
