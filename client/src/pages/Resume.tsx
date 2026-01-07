@@ -1,4 +1,4 @@
-import { ArrowLeft, Download, Printer } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import Navigation from "@/components/Navigation";
@@ -6,10 +6,6 @@ import Footer from "@/components/Footer";
 
 export default function Resume() {
   const [, navigate] = useLocation();
-
-  const handlePrint = () => {
-    window.print();
-  };
 
   const handleDownloadPDF = () => {
     // Create a simple PDF download using the browser's print functionality
@@ -31,14 +27,6 @@ export default function Resume() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
             <h1 className="text-4xl font-bold text-foreground">Resume</h1>
             <div className="flex flex-wrap gap-2 md:gap-3">
-              <Button
-                onClick={handlePrint}
-                variant="outline"
-                className="flex items-center gap-2 border-border text-foreground hover:bg-card"
-              >
-                <Printer className="w-4 h-4" />
-                Print
-              </Button>
               <Button
                 onClick={handleDownloadPDF}
                 className="flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
