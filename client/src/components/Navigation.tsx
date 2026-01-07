@@ -24,11 +24,24 @@ export default function Navigation() {
       setIsOpen(false);
     } else {
       // Anchor link
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setIsOpen(false);
+      if (location !== "/") {
+        // If not on home page, navigate to home first
+        navigate("/");
+        // Then scroll to section after a short delay to ensure page loaded
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
+      setIsOpen(false);
     }
   };
 
