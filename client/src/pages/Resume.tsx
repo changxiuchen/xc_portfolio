@@ -28,9 +28,9 @@ export default function Resume() {
       <main className="pt-24 pb-16">
         <div className="container max-w-4xl">
           {/* Header with Back Button */}
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
             <h1 className="text-4xl font-bold text-foreground">Resume</h1>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-2 md:gap-3">
               <Button
                 onClick={handlePrint}
                 variant="outline"
@@ -61,11 +61,11 @@ export default function Resume() {
           <div className="bg-card border border-border rounded-lg p-8 md:p-12 space-y-8">
             {/* Header */}
             <div className="border-b border-border pb-6">
-              <div className="flex items-start gap-6 mb-6">
+              <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
                 <img
                   src="/images/profile.jpg"
                   alt="Chang Xiu Chen"
-                  className="w-32 h-40 rounded-lg object-cover border-2 border-primary"
+                  className="w-24 h-32 md:w-32 md:h-40 rounded-lg object-cover border-2 border-primary flex-shrink-0"
                 />
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold text-foreground mb-2">Chang Xiu Chen</h2>
@@ -85,7 +85,7 @@ export default function Resume() {
               <h3 className="text-2xl font-bold text-foreground mb-4">Professional Summary</h3>
               <p className="text-foreground leading-relaxed">
                 Full-stack developer and UI/UX designer with a proven track record of building reliable, user-focused solutions. 
-                Experienced in web development (PHP, ASP.NET Core, React), mobile app development (Flutter), and design tools 
+                Experienced in web development (PHP, ASP.NET Core, HTML, CSS, Javascript), mobile app development (Flutter), and design tools 
                 (Photoshop, Illustrator, Canva). Demonstrated ability to lead projects, mentor team members, and solve complex 
                 problems systematically. Committed to delivering high-quality work with attention to detail and user experience.
               </p>
