@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FileText } from "lucide-react";
 
 export default function TestimonialSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,8 +52,15 @@ export default function TestimonialSection() {
               </p>
             </div>
 
+            {/* Star Rating */}
+            <div className="flex gap-1 mb-6">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-primary text-xl">★</span>
+              ))}
+            </div>
+
             {/* Author */}
-            <div className="flex items-center gap-4 pt-6 border-t border-border">
+            <div className="flex items-center gap-4 pt-6 border-t border-border mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
                 JG
               </div>
@@ -62,6 +70,17 @@ export default function TestimonialSection() {
                 <p className="text-sm text-muted-foreground">February 2024</p>
               </div>
             </div>
+
+            {/* View Full Testimonial Button */}
+            <a
+              href="/testimonials/ChangXiuChen'sTestimonial.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-smooth"
+            >
+              <FileText className="w-4 h-4" />
+              View Full Testimonial (PDF)
+            </a>
           </div>
 
           {/* Context */}
