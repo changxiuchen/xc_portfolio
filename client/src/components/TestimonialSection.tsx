@@ -52,13 +52,6 @@ export default function TestimonialSection() {
               </p>
             </div>
 
-            {/* Star Rating */}
-            <div className="flex gap-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-primary text-xl">★</span>
-              ))}
-            </div>
-
             {/* Author */}
             <div className="flex items-center gap-4 pt-6 border-t border-border mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
