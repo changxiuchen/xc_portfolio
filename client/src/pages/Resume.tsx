@@ -85,11 +85,11 @@ export default function Resume() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Backend & Databases</h4>
-                  <p className="text-muted-foreground">PHP, ASP.NET Core, C#, SQL Server, MySQL, Node.js, MVC Architecture</p>
+                  <p className="text-muted-foreground">PHP, ASP.NET Core, C#, SQL Server, MySQL, jQuery, JavaScript, MVC Architecture</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Frontend & Design</h4>
-                  <p className="text-muted-foreground">CSS, HTML5, CSS3, JavaScript, jQuery, Figma, Photoshop, Illustrator</p>
+                  <p className="text-muted-foreground">HTML, CSS, JavaScript, Figma, Photoshop, Illustrator</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Mobile & Tools</h4>

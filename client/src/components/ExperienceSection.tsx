@@ -103,7 +103,7 @@ export default function ExperienceSection() {
           </div>
 
           {/* Skills Section */}
-          <div className={`mt-16 pt-16 border-t border-border transition-all duration-700 ${
+          <div className={`mt-16 p-8 bg-card border border-border rounded-lg transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
             style={{ transitionDelay: "300ms" }}
@@ -113,8 +113,8 @@ export default function ExperienceSection() {
               <div>
                 <h4 className="font-bold text-foreground mb-4">Backend & Databases</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["PHP", "ASP.NET Core", "C#", "SQL Server", "MySQL", "Node.js"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
+                  {["PHP", "ASP.NET Core", "C#", "SQL Server", "MySQL", "jQuery", "JavaScript"].map((skill) => (
+                    <span key={skill} className="px-3 py-1 bg-primary/20 text-foreground rounded-full text-sm hover:bg-primary/30 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
@@ -123,8 +123,8 @@ export default function ExperienceSection() {
               <div>
                 <h4 className="font-bold text-foreground mb-4">Frontend & Design</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["Figma", "Photoshop", "Illustrator"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
+                  {["HTML", "CSS", "JavaScript", "Figma", "Photoshop", "Illustrator"].map((skill) => (
+                    <span key={skill} className="px-3 py-1 bg-primary/20 text-foreground rounded-full text-sm hover:bg-primary/30 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
@@ -134,7 +134,7 @@ export default function ExperienceSection() {
                 <h4 className="font-bold text-foreground mb-4">Mobile & Tools</h4>
                 <div className="flex flex-wrap gap-2">
                   {["Flutter", "Git", "MVC Architecture", "Responsive Design", "Canva"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
+                    <span key={skill} className="px-3 py-1 bg-primary/20 text-foreground rounded-full text-sm hover:bg-primary/30 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
@@ -144,7 +144,7 @@ export default function ExperienceSection() {
                 <h4 className="font-bold text-foreground mb-4">Soft Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {["Problem Solving", "Team Leadership", "Communication", "Mentoring", "System Optimization"].map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm hover:bg-primary/20 transition-colors duration-300">
+                    <span key={skill} className="px-3 py-1 bg-primary/20 text-foreground rounded-full text-sm hover:bg-primary/30 transition-colors duration-300">
                       {skill}
                     </span>
                   ))}
