@@ -21,17 +21,25 @@ export default function HeroSection() {
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-3xl">
-            {/* Main Headline */}
-            <h1 className={`heading-hero mb-6 text-foreground transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Building reliable solutions,{" "}
-              <span className="text-primary">one line at a time</span>
+            {/* Greeting */}
+            <p className={`text-primary font-mono text-lg mb-4 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              &lt;hello&gt;
+            </p>
+
+            {/* Main Headline with Name */}
+            <h1 className={`heading-hero mb-2 text-foreground transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '100ms'}}>
+              I'm <span className="text-primary">Chang Xiu Chen</span>
             </h1>
 
-            {/* Subheading */}
+            {/* Current Role */}
+            <h2 className={`text-2xl md:text-3xl font-semibold text-muted-foreground mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '150ms'}}>
+              Diploma student at Nanyang Polytechnic
+            </h2>
+
+            {/* Specialization */}
             <p className={`text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '200ms'}}>
-              I'm a full-stack developer and UI/UX designer who believes in solving problems systematically. 
-              With a background in web development, mobile apps, and design, I create solutions that are 
-              steadfast, reliable, and focused on the user experience.
+              Studying Diploma in Infocomm Media and Engineering, specializing in Software Application Development. 
+              Passionate about building reliable, user-focused solutions through web development, mobile apps, and UI/UX design.
             </p>
 
             {/* CTA Buttons */}
