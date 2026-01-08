@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+
 import { useEffect, useState } from "react";
 
 export default function AboutSection() {
@@ -21,20 +21,7 @@ export default function AboutSection() {
     return () => observer.disconnect();
   }, []);
 
-  const qualities = [
-    {
-      title: "Steadfast",
-      description: "Unwavering commitment to excellence and delivering quality work, no matter the challenge.",
-    },
-    {
-      title: "Reliable",
-      description: "Consistent performer who builds trust through dependability and never misses a commitment.",
-    },
-    {
-      title: "User-Focused",
-      description: "Every solution is designed with the end user in mind, prioritizing their experience.",
-    },
-  ];
+
 
   return (
     <section id="about" className={`py-20 md:py-32 bg-card/50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -64,18 +51,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Three Qualities */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {qualities.map((quality, idx) => (
-              <div key={quality.title} className={`bg-background p-6 rounded-lg border border-border hover:border-primary/50 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${idx * 150}ms`}}>
-                <div className="flex items-start gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <h3 className="text-xl font-bold text-foreground">{quality.title}</h3>
-                </div>
-                <p className="text-muted-foreground">{quality.description}</p>
-              </div>
-            ))}
-          </div>
+
 
           {/* Personal Touch */}
           <div className={`mt-16 p-8 bg-primary/10 border border-primary/20 rounded-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '450ms'}}>
