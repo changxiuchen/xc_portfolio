@@ -8,13 +8,8 @@ export default function Resume() {
   const [, navigate] = useLocation();
 
   const handleDownloadPDF = () => {
-    // Create a simple PDF download using the browser's print functionality
-    const printWindow = window.open("", "", "width=800,height=600");
-    if (printWindow) {
-      printWindow.document.write(document.documentElement.innerHTML);
-      printWindow.document.close();
-      printWindow.print();
-    }
+    // Defer print to avoid blocking the UI thread (fixes INP issue)
+    setTimeout(() => window.print(), 100);
   };
 
   return (
