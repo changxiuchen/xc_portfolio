@@ -58,6 +58,7 @@ export default function Resume() {
                     <span>📱 Phone: +65 8866 9245</span>
                     <a href="https://www.linkedin.com/in/chang-xiu-chen-3710011ba" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">🔗 LinkedIn: www.linkedin.com/in/chang-xiu-chen-3710011ba</a>
                     <a href="https://github.com/changxiuchen" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">💻 GitHub: github.com/changxiuchen</a>
+                    <a href="https://xc-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">🌐 Portfolio: xc-portfolio.vercel.app</a>
                   </div>
                 </div>
               </div>
