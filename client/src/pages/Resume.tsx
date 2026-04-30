@@ -19,7 +19,7 @@ export default function Resume() {
       <main className="pt-24 pb-16">
         <div className="container max-w-4xl">
           {/* Header with Back Button */}
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+          <div className="no-print flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
             <h1 className="text-4xl font-bold text-foreground">Resume</h1>
             <div className="flex flex-wrap gap-2 md:gap-3">
               <Button
@@ -243,15 +243,98 @@ export default function Resume() {
           {/* Print Styles */}
           <style>{`
             @media print {
-              body {
-                background: white;
+              /* ---- Page setup ---- */
+              @page {
+                margin: 18mm 15mm;
+                size: A4;
               }
-              .no-print {
-                display: none;
+
+              /* ---- Hide UI chrome ---- */
+              .no-print,
+              nav,
+              footer,
+              header {
+                display: none !important;
               }
-              .container {
-                max-width: 100%;
+
+              /* ---- Reset backgrounds to white ---- */
+              *,
+              body,
+              html {
+                background: #ffffff !important;
+                color: #1a1a1a !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
               }
+
+              /* ---- Layout ---- */
+              body { font-size: 11pt; line-height: 1.5; }
+              main { padding: 0 !important; }
+              .container { max-width: 100% !important; padding: 0 !important; }
+
+              /* ---- Card: remove dark bg & shadow ---- */
+              .bg-card {
+                background: #ffffff !important;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+              }
+
+              /* ---- Name header: add a clean accent underline ---- */
+              .border-b {
+                border-bottom: 2px solid #1a1a1a !important;
+                padding-bottom: 12pt !important;
+                margin-bottom: 12pt !important;
+              }
+
+              /* ---- Section dividers ---- */
+              section {
+                margin-bottom: 14pt !important;
+                page-break-inside: avoid;
+              }
+
+              h3 {
+                font-size: 13pt !important;
+                border-bottom: 1px solid #cccccc !important;
+                padding-bottom: 3pt !important;
+                margin-bottom: 8pt !important;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+              }
+
+              /* ---- Left-border experience items ---- */
+              .border-l-4 {
+                border-left: 3px solid #1a1a1a !important;
+                padding-left: 10pt !important;
+                margin-bottom: 10pt;
+                page-break-inside: avoid;
+              }
+
+              /* ---- Skill badges: print as outlined pills ---- */
+              span.rounded-full {
+                display: inline-block !important;
+                border: 1px solid #555555 !important;
+                background: #f5f5f5 !important;
+                color: #1a1a1a !important;
+                padding: 1pt 7pt !important;
+                border-radius: 999px !important;
+                font-size: 9pt !important;
+                margin: 2pt !important;
+              }
+
+              /* ---- Core qualities block ---- */
+              .bg-primary\/5 {
+                background: #f5f5f5 !important;
+                border: 1px solid #cccccc !important;
+              }
+
+              /* ---- Links: show URL text in print ---- */
+              a { color: #1a1a1a !important; text-decoration: none !important; }
+
+              /* ---- Muted text: darken for readability ---- */
+              .text-muted-foreground { color: #444444 !important; }
+              .text-primary { color: #1a1a1a !important; font-weight: 600 !important; }
             }
           `}</style>
         </div>
