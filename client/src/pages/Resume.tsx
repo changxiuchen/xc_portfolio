@@ -57,7 +57,7 @@ export default function Resume() {
                 />
                 <div className="flex-1">
                   <h2 className="text-3xl font-bold text-foreground mb-2">Chang Xiu Chen</h2>
-              <p className="text-primary font-semibold mb-3">Full-Stack Developer & UI/UX Designer</p>
+                  <p className="text-primary font-semibold mb-3">Full-Stack Developer & UI/UX Designer</p>
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                     <a href="mailto:xiuchen.w@outlook.com" className="hover:text-primary transition-colors">📧 Email: xiuchen.w@outlook.com</a>
                     <span>📱 Phone: +65 8866 9245</span>
@@ -72,9 +72,9 @@ export default function Resume() {
             <section>
               <h3 className="text-2xl font-bold text-foreground mb-4">Professional Summary</h3>
               <p className="text-foreground leading-relaxed">
-                Full-stack developer and UI/UX designer with a proven track record of building reliable, user-focused solutions. 
-                Experienced in web development (PHP, ASP.NET Core, HTML, CSS, Javascript), mobile app development (Flutter), and design tools 
-                (Photoshop, Illustrator, Canva). Demonstrated ability to lead projects, mentor team members, and solve complex 
+                Full-stack developer and UI/UX designer with a proven track record of building reliable, user-focused solutions.
+                Experienced in web development (PHP, ASP.NET Core, HTML, CSS, Javascript), mobile app development (Flutter), and design tools
+                (Photoshop, Illustrator, Canva). Demonstrated ability to lead projects, mentor team members, and solve complex
                 problems systematically. Committed to delivering high-quality work with attention to detail and user experience.
               </p>
             </section>
@@ -93,11 +93,11 @@ export default function Resume() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Mobile & Tools</h4>
-                  <p className="text-muted-foreground">Flutter, Dart, Git, Responsive Design, Canva, Lightspeed X, Shopify</p>
+                  <p className="text-muted-foreground">Flutter, Dart, Git, Responsive Design, Canva, Lightspeed X, Shopify, Meta Business Suite, CapCut, Adobe Photoshop, Adobe Illustrator</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Soft Skills</h4>
-                  <p className="text-muted-foreground">Problem Solving, Team Leadership, Communication, Mentoring, System Optimization, Project Management</p>
+                  <p className="text-muted-foreground">Problem Solving, Team Leadership, Communication, Mentoring, System Optimization, Project Management, Social Media Marketing, Data Analysis</p>
                 </div>
               </div>
             </section>
@@ -185,7 +185,7 @@ export default function Resume() {
               <div className="space-y-4">
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Director's List (Academic)</h4>
-                  <p className="text-primary font-medium">NYP & ITE | Multiple Semesters (2022-2025)</p>
+                  <p className="text-primary font-medium">NYP & ITE | Multiple Semesters (2022-2026)</p>
                   <p className="text-muted-foreground text-sm">Awarded to the Top 10-15% of the cohort for consistent academic excellence.</p>
                 </div>
                 <div className="border-l-4 border-primary pl-4">
