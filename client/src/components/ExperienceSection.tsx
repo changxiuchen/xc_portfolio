@@ -23,9 +23,21 @@ export default function ExperienceSection() {
 
   const experiences = [
     {
+      title: "Social Media Content Specialist",
+      company: "The Brake Shop SG",
+      period: "January 2026 – Present",
+      description: "Developing and executing social media strategies across Facebook and Instagram, producing high-engagement visual content, and managing targeted ad campaigns to drive reach and engagement.",
+      highlights: [
+        "Develop and execute comprehensive social media strategies using Meta Business Suite",
+        "Produce high-engagement visual content including photography and short-form video reels edited with CapCut",
+        "Design professional promotional posters and digital assets using Canva",
+        "Manage targeted ad campaigns and conduct audience research to optimize reach, engagement, and click-through rates",
+      ],
+    },
+    {
       title: "Project Leader (Intern) & IT Assistant",
       company: "Intertech Hardware",
-      period: "2023 - Present",
+      period: "2023 – Present",
       description: "Managing e-commerce platforms (Shopify, Lazada), optimizing POS inventory systems (Lightspeed X), and mentoring new team members on system operations and best practices.",
       highlights: [
         "Manage Shopify store with product updates and pricing optimization",
@@ -37,12 +49,12 @@ export default function ExperienceSection() {
     {
       title: "Passenger Service Assistant (Wheelchair Assistance)",
       company: "Changi Airport (SATS)",
-      period: "2022 - Present",
+      period: "2022 – Present",
       description: "Provided reliable support to international passengers, learning the importance of dependability, communication, and understanding real-world accessibility needs.",
       highlights: [
-        "Assisted international passengers with language barriers using patience and clear guidance",
-        "Applied insights from assisting elderly passengers to design accessible interfaces",
-        "Maintained strict punctuality and readiness, adhering to tight airport schedules",
+        "Assist international passengers with language barriers using patience and clear guidance",
+        "Apply insights from accessibility needs to inform inclusive design decisions",
+        "Maintain strict punctuality and readiness adhering to tight airport schedules",
       ],
     },
   ];
@@ -133,7 +145,7 @@ export default function ExperienceSection() {
               <div>
                 <h4 className="font-bold text-foreground mb-4">Mobile & Tools</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["Flutter", "Git", "MVC Architecture", "Responsive Design", "Canva"].map((skill) => (
+                  {["Flutter", "Dart", "Git", "Shopify", "Lightspeed X", "Meta Business Suite", "CapCut", "Responsive Design", "Canva", "MVC Architecture"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-primary/20 text-foreground rounded-full text-sm hover:bg-primary/30 transition-colors duration-300">
                       {skill}
                     </span>
@@ -143,7 +155,7 @@ export default function ExperienceSection() {
               <div>
                 <h4 className="font-bold text-foreground mb-4">Soft Skills</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["Problem Solving", "Team Leadership", "Communication", "Mentoring", "System Optimization"].map((skill) => (
+                  {["Problem Solving", "Team Leadership", "Communication", "Mentoring", "Project Management", "Social Media Marketing", "Data Analysis", "System Optimization"].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-primary/20 text-foreground rounded-full text-sm hover:bg-primary/30 transition-colors duration-300">
                       {skill}
                     </span>

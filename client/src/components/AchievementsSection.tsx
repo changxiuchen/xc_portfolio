@@ -1,27 +1,34 @@
-import { Award, Trophy } from "lucide-react";
+import { Award, Globe, Trophy } from "lucide-react";
 
 export default function AchievementsSection() {
   const achievements = [
     {
       title: "Director's List (Academic)",
       issuer: "NYP & ITE",
-      period: "Multiple Semesters (2022-2025)",
+      period: "Multiple Semesters (2022–2026)",
       description: "Awarded to the Top 10-15% of the cohort for consistent academic excellence.",
       icon: Trophy,
     },
     {
       title: "Edusave Merit Bursary",
       issuer: "Singapore Government",
-      period: "2023-2025",
+      period: "2023–2025",
       description: "Awarded to the Top 25% of the cohort for academic performance and good conduct.",
       icon: Award,
     },
     {
       title: "EAGLES Award (Leadership)",
-      issuer: "ITE",
+      issuer: "NYP",
       period: "2023 S2",
       description: "Selected from the Top 10% for outstanding leadership and service to the community.",
       icon: Trophy,
+    },
+    {
+      title: "Youth Expedition Project (YEP) – Laos",
+      issuer: "Nanyang Polytechnic / National Youth Council",
+      period: "March 2026",
+      description: "Participated in a two-week international service-learning expedition focused on community development and cultural exchange in rural Laos.",
+      icon: Globe,
     },
   ];
 
