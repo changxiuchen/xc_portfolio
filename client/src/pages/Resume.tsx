@@ -107,6 +107,16 @@ export default function Resume() {
               <h3 className="text-2xl font-bold text-foreground mb-4">Work Experience</h3>
               <div className="space-y-6">
                 <div className="border-l-4 border-primary pl-4">
+                  <h4 className="text-lg font-semibold text-foreground">Social Media Content Specialist</h4>
+                  <p className="text-primary font-medium">The Brake Shop SG | January 2026 – Present</p>
+                  <ul className="mt-2 space-y-1 text-muted-foreground list-disc list-inside">
+                    <li>Develop and execute comprehensive social media strategies across Facebook and Instagram using Meta Business Suite.</li>
+                    <li>Produce high-engagement visual content, including photography and short-form video reels edited with CapCut.</li>
+                    <li>Design professional promotional posters and digital assets using Canva.</li>
+                    <li>Manage targeted ad campaigns and conduct audience research to optimize reach, engagement, and click-through rates.</li>
+                  </ul>
+                </div>
+                <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Project Leader (Intern) & IT Assistant</h4>
                   <p className="text-primary font-medium">Intertech Hardware | 2023 - Present</p>
                   <ul className="mt-2 space-y-1 text-muted-foreground list-disc list-inside">
@@ -187,6 +197,14 @@ export default function Resume() {
                   <h4 className="text-lg font-semibold text-foreground">EAGLES Award (Leadership)</h4>
                   <p className="text-primary font-medium">NYP | 2023 S2</p>
                   <p className="text-muted-foreground text-sm">Selected from the Top 10% for outstanding leadership and service to the community.</p>
+                </div>
+                <div className="border-l-4 border-primary pl-4">
+                  <h4 className="text-lg font-semibold text-foreground">Youth Expedition Project (YEP) – Laos</h4>
+                  <p className="text-primary font-medium">Nanyang Polytechnic / National Youth Council | March 2026</p>
+                  <ul className="mt-2 space-y-1 text-muted-foreground list-disc list-inside">
+                    <li>Participated in a two-week international service-learning expedition (March 15–28) focused on community development and cultural exchange.</li>
+                    <li>Collaborated with a diverse team to implement sustainable community projects in rural Laos.</li>
+                  </ul>
                 </div>
               </div>
             </section>
