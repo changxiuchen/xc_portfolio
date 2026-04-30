@@ -81,23 +81,39 @@ export default function Resume() {
 
             {/* Technical Skills */}
             <section>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Technical Skills</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <h3 className="text-2xl font-bold text-foreground mb-5">Technical Skills</h3>
+              <div className="space-y-5">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Backend & Databases</h4>
-                  <p className="text-muted-foreground">PHP, ASP.NET Core, C#, SQL Server, MySQL, jQuery, JavaScript, MVC Architecture</p>
+                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Backend & Databases</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["PHP", "ASP.NET Core", "C#", "SQL Server", "MySQL", "jQuery", "JavaScript", "MVC Architecture"].map(skill => (
+                      <span key={skill} className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 font-medium">{skill}</span>
+                    ))}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Frontend & Design</h4>
-                  <p className="text-muted-foreground">HTML, CSS, JavaScript, Figma, Photoshop, Illustrator</p>
+                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Frontend & Design</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["HTML", "CSS", "JavaScript", "Figma", "Photoshop", "Illustrator", "Canva"].map(skill => (
+                      <span key={skill} className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 font-medium">{skill}</span>
+                    ))}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Mobile & Tools</h4>
-                  <p className="text-muted-foreground">Flutter, Dart, Git, Responsive Design, Canva, Lightspeed X, Shopify, Meta Business Suite, CapCut, Adobe Photoshop, Adobe Illustrator</p>
+                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Mobile & Tools</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["Flutter", "Dart", "Git", "Shopify", "Lightspeed X", "Meta Business Suite", "CapCut", "Responsive Design"].map(skill => (
+                      <span key={skill} className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary border border-primary/20 font-medium">{skill}</span>
+                    ))}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Soft Skills</h4>
-                  <p className="text-muted-foreground">Problem Solving, Team Leadership, Communication, Mentoring, System Optimization, Project Management, Social Media Marketing, Data Analysis</p>
+                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Soft Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["Problem Solving", "Team Leadership", "Communication", "Mentoring", "Project Management", "Social Media Marketing", "Data Analysis", "System Optimization"].map(skill => (
+                      <span key={skill} className="px-3 py-1 text-sm rounded-full bg-muted text-muted-foreground border border-border font-medium">{skill}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </section>
