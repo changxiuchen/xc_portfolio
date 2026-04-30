@@ -244,36 +244,31 @@ export default function Resume() {
           {/* Print Styles */}
           <style>{`
             @media print {
-              /* ---- Page setup ---- */
+              /* ---- Page setup: tight margins for 2-page fit ---- */
               @page {
-                margin: 18mm 15mm;
+                margin: 10mm 12mm;
                 size: A4;
               }
 
               /* ---- Hide UI chrome ---- */
-              .no-print,
-              nav,
-              footer,
-              header {
+              .no-print, nav, footer, header {
                 display: none !important;
               }
 
-              /* ---- Reset backgrounds to white ---- */
-              *,
-              body,
-              html {
+              /* ---- Reset backgrounds ---- */
+              *, body, html {
                 background: #ffffff !important;
                 color: #1a1a1a !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
               }
 
-              /* ---- Layout ---- */
-              body { font-size: 11pt; line-height: 1.5; }
+              /* ---- Base typography: smaller & tighter ---- */
+              body { font-size: 9pt !important; line-height: 1.35 !important; }
               main { padding: 0 !important; }
               .container { max-width: 100% !important; padding: 0 !important; }
 
-              /* ---- Card: remove dark bg & shadow ---- */
+              /* ---- Card: strip all decoration ---- */
               .bg-card {
                 background: #ffffff !important;
                 border: none !important;
@@ -282,60 +277,104 @@ export default function Resume() {
                 box-shadow: none !important;
               }
 
-              /* ---- Name header: add a clean accent underline ---- */
+              /* ---- KILL Tailwind spacing gaps (biggest page-count culprit) ---- */
+              .space-y-8 > * + * { margin-top: 6pt !important; }
+              .space-y-6 > * + * { margin-top: 5pt !important; }
+              .space-y-5 > * + * { margin-top: 0 !important; }
+              .space-y-4 > * + * { margin-top: 4pt !important; }
+              .space-y-2 > * + * { margin-top: 2pt !important; }
+              .space-y-1 > * + * { margin-top: 1pt !important; }
+
+              /* ---- Kill margin/padding utilities ---- */
+              .mb-6, .mb-8 { margin-bottom: 4pt !important; }
+              .mb-5        { margin-bottom: 3pt !important; }
+              .mb-4        { margin-bottom: 3pt !important; }
+              .mb-3        { margin-bottom: 2pt !important; }
+              .mb-2        { margin-bottom: 1pt !important; }
+              .pb-6        { padding-bottom: 4pt !important; }
+              .pt-32, .pt-24 { padding-top: 0 !important; }
+              .pb-16       { padding-bottom: 0 !important; }
+              .p-8, .p-12, .p-6 { padding: 0 !important; }
+              .gap-6       { gap: 8pt !important; }
+              .gap-4       { gap: 4pt !important; }
+              .gap-2       { gap: 3pt !important; }
+
+              /* ---- Header: profile photo shrunk, tight layout ---- */
               .border-b {
-                border-bottom: 2px solid #1a1a1a !important;
-                padding-bottom: 12pt !important;
-                margin-bottom: 12pt !important;
+                border-bottom: 1.5px solid #1a1a1a !important;
+                padding-bottom: 5pt !important;
+                margin-bottom: 6pt !important;
+              }
+              img[alt="Chang Xiu Chen"] {
+                width: 52px !important;
+                height: 68px !important;
               }
 
-              /* ---- Section dividers ---- */
-              section {
-                margin-bottom: 14pt !important;
-                page-break-inside: avoid;
-              }
-
+              /* ---- Headings ---- */
+              h2 { font-size: 17pt !important; margin-bottom: 1pt !important; line-height: 1.2 !important; }
               h3 {
-                font-size: 13pt !important;
-                border-bottom: 1px solid #cccccc !important;
-                padding-bottom: 3pt !important;
-                margin-bottom: 8pt !important;
+                font-size: 9.5pt !important;
+                font-weight: 700 !important;
+                border-bottom: 1px solid #aaaaaa !important;
+                padding-bottom: 2pt !important;
+                margin-bottom: 4pt !important;
                 text-transform: uppercase;
-                letter-spacing: 0.04em;
+                letter-spacing: 0.06em;
+              }
+              h4 { font-size: 9pt !important; margin-bottom: 1pt !important; }
+
+              /* ---- Sections: allow natural page breaks ---- */
+              section { margin-bottom: 6pt !important; page-break-inside: auto; }
+
+              /* ---- Skills: 2-column grid halves height ---- */
+              .space-y-5 {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 4pt 12pt !important;
               }
 
-              /* ---- Left-border experience items ---- */
+              /* ---- Experience / Education items ---- */
               .border-l-4 {
-                border-left: 3px solid #1a1a1a !important;
-                padding-left: 10pt !important;
-                margin-bottom: 10pt;
+                border-left: 2px solid #333333 !important;
+                padding-left: 7pt !important;
+                margin-bottom: 5pt !important;
                 page-break-inside: avoid;
               }
 
-              /* ---- Skill badges: print as outlined pills ---- */
+              /* ---- Bullet lists ---- */
+              ul { margin: 1pt 0 !important; padding-left: 11pt !important; }
+              li { margin-bottom: 0.5pt !important; line-height: 1.3 !important; }
+              .list-inside { padding-left: 0 !important; }
+
+              /* ---- Skill badges ---- */
               span.rounded-full {
                 display: inline-block !important;
-                border: 1px solid #555555 !important;
-                background: #f5f5f5 !important;
+                border: 1px solid #666666 !important;
+                background: #f0f0f0 !important;
                 color: #1a1a1a !important;
-                padding: 1pt 7pt !important;
+                padding: 0pt 5pt !important;
                 border-radius: 999px !important;
-                font-size: 9pt !important;
-                margin: 2pt !important;
+                font-size: 7.5pt !important;
+                line-height: 1.7 !important;
+                margin: 1pt !important;
               }
 
-              /* ---- Core qualities block ---- */
+              /* ---- Qualities block ---- */
               .bg-primary\/5 {
                 background: #f5f5f5 !important;
                 border: 1px solid #cccccc !important;
+                border-radius: 3pt !important;
+                padding: 4pt 6pt !important;
+                page-break-inside: avoid;
               }
+              .md\\:grid-cols-3 { grid-template-columns: 1fr 1fr 1fr !important; }
 
-              /* ---- Links: show URL text in print ---- */
+              /* ---- Text colours ---- */
               a { color: #1a1a1a !important; text-decoration: none !important; }
-
-              /* ---- Muted text: darken for readability ---- */
               .text-muted-foreground { color: #444444 !important; }
-              .text-primary { color: #1a1a1a !important; font-weight: 600 !important; }
+              .text-primary { color: #222222 !important; font-weight: 600 !important; }
+              .text-sm { font-size: 8pt !important; }
+              .text-xs { font-size: 7.5pt !important; }
             }
           `}</style>
         </div>
