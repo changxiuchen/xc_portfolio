@@ -41,13 +41,17 @@ export default function AboutSection() {
             </p>
             <p className="text-lg text-foreground leading-relaxed mb-6">
               My journey spans from wheelchair assistance work, where I learned the importance 
-              of reliability and human connection, to tech roles where I've honed my problem-solving 
-              skills. At Intertech Hardware, I manage e-commerce platforms, optimize inventory systems, 
-              and mentor new team members—constantly learning and growing.
+              of reliability and human connection, to technical roles where I've honed my problem-solving 
+              skills. At Intertech Hardware, I manage e-commerce platforms and optimize inventory systems, 
+              while my recent work as a Social Media Content Specialist at The Brake Shop SG has allowed 
+              me to bridge the gap between technical logic and visual storytelling. By applying my systematic 
+              approach to Meta Business Suite, CapCut, and Canva, I've learned that whether I'm debugging 
+              code or optimizing a targeted ad campaign, the goal is identical: delivering value through 
+              precision and thoughtful design.
             </p>
             <p className="text-lg text-foreground leading-relaxed">
-              I believe that great software is built on three foundations: technical excellence, 
-              thoughtful design, and genuine care for the user. That's what drives me every day.
+              I believe that great software—and great content—is built on three foundations: technical 
+              excellence, engaging design, and genuine care for the user. That's what drives me every day.
             </p>
           </div>
 
