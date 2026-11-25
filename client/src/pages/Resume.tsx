@@ -56,7 +56,7 @@ export default function Resume() {
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                     <a href="mailto:xiuchen.w@outlook.com" className="hover:text-primary transition-colors">📧 Email: xiuchen.w@outlook.com</a>
                     <span>📱 Phone: +65 8866 9245</span>
-                    <a href="https://www.linkedin.com/in/chang-xiu-chen-3710011ba" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">🔗 LinkedIn: www.linkedin.com/in/chang-xiu-chen-3710011ba</a>
+                    <a href="https://www.linkedin.com/in/changxiuchen" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">🔗 LinkedIn: www.linkedin.com/in/changxiuchen</a>
                     <a href="https://github.com/changxiuchen" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">💻 GitHub: github.com/changxiuchen</a>
                     <a href="https://xc-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">🌐 Portfolio: xc-portfolio.vercel.app</a>
                   </div>
@@ -130,7 +130,7 @@ export default function Resume() {
                 </div>
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Project Leader (Intern) & IT Assistant</h4>
-                  <p className="text-primary font-medium">Intertech Hardware | 2023 - Present</p>
+                  <p className="text-primary font-medium">Intertech Hardware | September 2023 – Present · Part-time since February 2024</p>
                   <ul className="mt-2 space-y-1 text-muted-foreground list-disc list-inside">
                     <li>Manage Shopify e-commerce store with product updates and pricing optimization</li>
                     <li>Optimize Lazada seller platform for improved visibility and sales performance</li>
@@ -140,7 +140,7 @@ export default function Resume() {
                 </div>
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Passenger Service Assistant (Wheelchair Assistance)</h4>
-                  <p className="text-primary font-medium">Changi Airport (SATS) | 2022 - Present</p>
+                  <p className="text-primary font-medium">Changi Airport (SATS) | 2022 – Present</p>
                   <ul className="mt-2 space-y-1 text-muted-foreground list-disc list-inside">
                     <li>Assist international passengers with language barriers using patience and clear guidance</li>
                     <li>Apply insights from accessibility needs to inform inclusive design decisions</li>
@@ -197,7 +197,7 @@ export default function Resume() {
               <div className="space-y-4">
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="text-lg font-semibold text-foreground">Director's List (Academic)</h4>
-                  <p className="text-primary font-medium">NYP & ITE | Multiple Semesters (2022-2026)</p>
+                  <p className="text-primary font-medium">NYP & ITE | Multiple Semesters (2022–2026)</p>
                   <p className="text-muted-foreground text-sm">Awarded to the Top 10-15% of the cohort for consistent academic excellence.</p>
                 </div>
                 <div className="border-l-4 border-primary pl-4">

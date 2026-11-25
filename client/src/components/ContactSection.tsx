@@ -18,8 +18,8 @@ export default function ContactSection() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "chang-xiu-chen-3710011ba",
-      href: "https://www.linkedin.com/in/chang-xiu-chen-3710011ba",
+      value: "changxiuchen",
+      href: "https://www.linkedin.com/in/changxiuchen",
     },
     {
       icon: Github,

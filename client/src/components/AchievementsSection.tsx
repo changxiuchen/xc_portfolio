@@ -12,7 +12,7 @@ export default function AchievementsSection() {
     {
       title: "Edusave Merit Bursary",
       issuer: "Singapore Government",
-      period: "2023–2025",
+      period: "2023 S2",
       description: "Awarded to the Top 25% of the cohort for academic performance and good conduct.",
       icon: Award,
     },

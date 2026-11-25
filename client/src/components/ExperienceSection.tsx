@@ -37,7 +37,7 @@ export default function ExperienceSection() {
     {
       title: "Project Leader (Intern) & IT Assistant",
       company: "Intertech Hardware",
-      period: "2023 – Present",
+      period: "September 2023 – Present · Part-time since February 2024",
       description: "Managing e-commerce platforms (Shopify, Lazada), optimizing POS inventory systems (Lightspeed X), and mentoring new team members on system operations and best practices.",
       highlights: [
         "Manage Shopify store with product updates and pricing optimization",

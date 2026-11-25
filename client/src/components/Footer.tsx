@@ -14,7 +14,7 @@ export default function Footer() {
   const socialLinks = [
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/chang-xiu-chen-3710011ba",
+      href: "https://www.linkedin.com/in/changxiuchen",
       icon: Linkedin,
     },
     {
