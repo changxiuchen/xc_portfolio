@@ -34,7 +34,7 @@ export default function AboutSection() {
           {/* Main Bio */}
           <div className="prose prose-invert max-w-none mb-12">
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              I'm a software engineer who approaches every problem with a clear methodology: 
+              I'm a full-stack developer and UI/UX designer who approaches every problem with a clear methodology: 
               stay calm, break it into smaller parts, and solve systematically. This philosophy 
               has shaped how I work—whether building web applications, designing user interfaces, 
               or managing complex systems.

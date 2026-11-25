@@ -48,7 +48,7 @@ export default function ProjectsSection() {
       wireframes: ["/images/Desktop_Home.jpg", "/images/Desktop_MoviesDetails.jpg", "/images/Desktop_MoviesDetailscopy.jpg", "/images/Desktop_Admin.jpg"],
       status: "completed" as const,
       links: {
-        github: "https://github.com/changxiuchen",
+        github: "https://github.com/changxiuchen/movie_website",
         live: "https://movie-website.page.gd/",
       },
       learnings: [
@@ -128,7 +128,7 @@ export default function ProjectsSection() {
         "WorkHub is a cross-platform mobile task management application designed to help remote teams stay organized and meet deadlines. This project demonstrates my ability to plan complex applications systematically before development. I created detailed use case diagrams, comprehensive UI/UX flows, and a complete feature roadmap. The proposal includes 8 mandatory features for core functionality, 4 bonus features for enhanced user experience, and 1 challenging feature involving local data persistence using Shared Preferences.",
       technologies: ["Flutter", "Dart", "Shared Preferences", "UI/UX Design", "Wireframing"],
       images: {
-        main: null,
+        main: "/images/workhub-app.svg",
         gallery: [],
       },
       features: [
